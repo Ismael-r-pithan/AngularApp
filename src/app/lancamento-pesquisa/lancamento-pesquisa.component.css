@@ -1,0 +1,26 @@
+div {
+  margin: 5px;
+}
+
+.col-valor {
+  width: 120px;
+  text-align: right;
+}
+
+.col-data {
+  width: 120px;
+  text-align: center;
+}
+
+.col-acoes {
+  width: 90px;
+  text-align: center;
+}
+
+.span {
+  padding: .4rem;
+  min-width: 30%;
+  display: inline-block;
+  margin: -.4em 1em -.4em -.4rem;
+  font-weight: bold;
+}

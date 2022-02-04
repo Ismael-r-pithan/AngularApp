@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div>
+
+    <div class="ui-g">
+      <div class="ui-g-12 center">
+        <a href="javascript:;" class="center navbar-toggle" (click)="exibindoMenu=!exibindoMenu"> <i class="pi pi-align-justify"></i> </a>
+      </div>
+    </div>
+  </div>
+
+
+  <ul class="navbar-menu" [hidden]="!exibindoMenu">
+    <li class="navbar-usuario">Nome Usuario Logado</li>
+    <li class="navbar-menuitem"><a href="#">Lançamentos</a></li>
+    <li class="navbar-menuitem"><a href="#">Pessoas</a></li>
+    <li class="navbar-menuitem"><a href="#">Sair</a></li>
+  </ul>
+
+</nav>
