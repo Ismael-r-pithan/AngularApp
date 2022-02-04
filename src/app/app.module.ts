@@ -11,6 +11,7 @@ import { TableModule } from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import { LancamentoPesquisaComponent } from './lancamento-pesquisa/lancamento-pesquisa.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PessoaPesquisaComponent } from './pessoa-pesquisa/pessoa-pesquisa.component';
 
 
 
@@ -19,7 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     LancamentoPesquisaComponent,
-    NavbarComponent
+    NavbarComponent,
+    PessoaPesquisaComponent
   ],
   imports: [
     BrowserModule,
