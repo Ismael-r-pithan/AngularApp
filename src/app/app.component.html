@@ -47,8 +47,8 @@
                 <td styleClass="col-data">{{lancamentos.dataVencimento}}</td>
                 <td styleClass="col-data">{{lancamentos.dataPagamento}}</td>
                 <td [ngStyle]="{color: lancamentos.tipo === 'DESPESA' ? 'red' : 'blue'}" styleClass="col-valor">{{lancamentos.valor}}</td>
-                <td styleClass="col-acoes"><a class="pi pi-pencil"></a></td>
-                <td styleClass="col-acoes"><a class="pi pi-trash"></a></td>
+                <td styleClass="col-acoes"><a class="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a></td>
+                <td styleClass="col-acoes"><a class="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></a></td>
 
             </tr>
         </ng-template>
