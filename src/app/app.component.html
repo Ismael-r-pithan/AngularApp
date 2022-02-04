@@ -19,7 +19,7 @@
     </div>
 
     <div class="ui-g-12">
-      <button class="p-button-sm" pButton type="submit" label="Pesquisar"></button>
+      <button class="p-button-sm" icon="pi pi-search" pButton type="button" label="Pesquisar" iconPos="left" ></button>
     </div>
 
 </div>
@@ -28,8 +28,7 @@
     <div class="ui-g-12">
 
 <div class="card">
-    <p-table [value]="lancamentos" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll"
-        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+    <p-table [value]="lancamentos" [paginator]="true" [rows]="1" [showCurrentPageReport]="true" responsiveLayout="scroll">
         <ng-template pTemplate="header">
             <tr>
                 <th>Pessoa</th>
@@ -53,21 +52,11 @@
 
             </tr>
         </ng-template>
-
-
-
-        <ng-template pTemplate="paginatorleft">
-            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
-        </ng-template>
-
-        <ng-template pTemplate="paginatorright">
-            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
-        </ng-template>
     </p-table>
 </div>
 
     <div class="ui-g-12">
-      <a class="p-button-sm" pButton label="Novo Lançamento"></a>
+      <a class="p-button-sm" icon="pi pi-plus" iconPos="left" pButton label="Novo Lançamento"></a>
     </div>
 
     </div>
