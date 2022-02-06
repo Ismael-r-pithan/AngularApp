@@ -9,6 +9,8 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { DropdownModule } from 'primeng/dropdown';
 
 import { TableModule } from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
@@ -37,7 +39,9 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     TooltipModule,
     InputTextareaModule,
     CalendarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SelectButtonModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
