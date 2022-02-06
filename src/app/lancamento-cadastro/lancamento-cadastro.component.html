@@ -1,4 +1,4 @@
-<div class="card ">
+<div class="card container">
 
     <div class="inline-block">
     <h1>Novo Lançamento</h1>
@@ -11,11 +11,11 @@
     <div class="formgrid grid">
 
         <div class="field col-12 md:col-3 lg:col-3">
-            <label>Vencimento</label>
+            <label class="w-full">Vencimento</label>
             <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"> </p-calendar>
         </div>
         <div class="field col-12 md:col-3 lg:col-3">
-            <label>{{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento'}}</label>
+            <label class="w-full">{{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento'}}</label>
             <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"> </p-calendar>
         </div>
         <div class="field col-12 lg:col-12 md:col-9">
@@ -24,14 +24,14 @@
         </div>
         <div class="field col-12 md:col-3 lg:col-12">
             <label>Valor</label>
-            <input pInputText type="text" class="inputfield w-full">
+            <p-inputNumber class="inputfield w-full " mode="currency" currency="BRL" locale="pt-BR" [minFractionDigits]="2"  ></p-inputNumber>
         </div>
         <div class="field col-12 md:col-12 lg:col-12">
-            <label>Categoria</label>
+            <label class="w-full">Categoria</label>
             <p-dropdown [options]="categorias" placeholder="selecione" > </p-dropdown>
         </div>
         <div class="field col-12 md:col-12 lg:col-12">
-            <label>Pessoa</label>
+            <label class="w-full">Pessoa</label>
             <p-dropdown [options]="pessoas" placeholder="selecione"> </p-dropdown>
         </div>
         <div class="field col-12 md:col-12">
