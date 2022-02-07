@@ -1,5 +1,8 @@
 <div class="container">
   <div class="grid">
+
+  <form>
+
     <div class="col-12">
     <h1>Novo Lançamento</h1>
     </div>
@@ -12,31 +15,31 @@
 
         <div class="field col-12 md:col-3 lg:col-3">
             <label class="w-full">Vencimento</label>
-            <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"> </p-calendar>
+            <p-calendar dateFormat="dd/mm/yy" [showIcon]="true" name="vencimento" ngModel> </p-calendar>
         </div>
         <div class="field col-12 md:col-3 lg:col-3">
             <label class="w-full">{{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento'}}</label>
-            <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"> </p-calendar>
+            <p-calendar dateFormat="dd/mm/yy" [showIcon]="true" name="pagamento" ngModel> </p-calendar>
         </div>
         <div class="field col-12 lg:col-12 md:col-9">
             <label>Descrição</label>
-            <input pInputText type="text" class="inputfield w-full">
+            <input name="descricao" #descricao="ngModel" ngModel required minlength="5" pInputText type="text" class="inputfield w-full">
         </div>
         <div class="field col-12 md:col-3 lg:col-12">
             <label>Valor</label>
-            <p-inputNumber class="inputfield w-full " mode="currency" currency="BRL" locale="pt-BR" [minFractionDigits]="2"  ></p-inputNumber>
+            <p-inputNumber class="inputfield w-full " mode="currency" currency="BRL" locale="pt-BR" [minFractionDigits]="2" ngModel name="valor" name="valor" ngModel></p-inputNumber>
         </div>
         <div class="field col-12 md:col-12 lg:col-12">
             <label class="w-full">Categoria</label>
-            <p-dropdown [options]="categorias" placeholder="selecione" > </p-dropdown>
+            <p-dropdown [options]="categorias" placeholder="selecione" name="categorias" ngModel> </p-dropdown>
         </div>
         <div class="field col-12 md:col-12 lg:col-12">
             <label class="w-full">Pessoa</label>
-            <p-dropdown [options]="pessoas" placeholder="selecione"> </p-dropdown>
+            <p-dropdown [options]="pessoas" placeholder="selecione" name="pessoa" ngModel> </p-dropdown>
         </div>
         <div class="field col-12 md:col-12">
             <label>Observação</label>
-            <textarea pInputTextarea rows="3" class="inputfield w-full"></textarea>
+            <textarea pInputTextarea rows="3" class="inputfield w-full" name="observacao" ngModel></textarea>
         </div>
         <div class="field col-12 flex align-content-end flex-wrap card-container align-items-center">
           <button class="p-button-sm p-button-info" pButton type="submit" label="Salvar"></button>
@@ -46,6 +49,7 @@
 
       </div>
 
+    </form>
 
     </div>
 </div>
