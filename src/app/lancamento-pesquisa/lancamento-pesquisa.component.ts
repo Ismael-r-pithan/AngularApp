@@ -1,19 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { LancamentoService } from '../lancamento.service';
+import { Lancamento } from './Lancamento';
+
 
 @Component({
   selector: 'app-lancamento-pesquisa',
   templateUrl: './lancamento-pesquisa.component.html',
   styleUrls: ['./lancamento-pesquisa.component.css']
 })
-export class LancamentoPesquisaComponent  {
+export class LancamentoPesquisaComponent implements OnInit  {
 
-  lancamentos = [
-    {
-      tipo: "DESPESA", descricao: 'Compras', dataVencimento: '30/06/2017', dataPagamento: '30/07/2017', valor: 4.55, pessoa: 'Padaria do José'
-    },
-    {
-      tipo: "RECEITA", descricao: 'Venda de software', dataVencimento: '30/06/2017', dataPagamento: null, valor: 8000, pessoa: 'Tecno s.a'
-    }
-  ];
+  ngOnInit(): void {
+      this.lancamentoService.list().subscribe(dados => this.lancamentos = dados);
+  }
+
+  lancamentos:Lancamento[] = [];
+
+
+  constructor(private lancamentoService: LancamentoService) {
+    this.list();
+  }
+
+  public list() {
+    this.lancamentoService.list().subscribe(
+      (data: Lancamento[]) => {
+        this.lancamentos = data;
+      }, error => {
+        console.log("erro");
+      }
+    );
+  }
+
+
 
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PessoaPesquisaComponent } from './pessoa-pesquisa/pessoa-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LancamentoService } from './lancamento.service';
+import { Routes, RouterModule } from '@angular/router';
 
 
 
@@ -49,9 +52,10 @@ import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.compo
     DropdownModule,
     InputNumberModule,
     InputMaskModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LancamentoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
